@@ -1,0 +1,14 @@
+@import "./blocks/header";
+@import "./blocks/main_container";
+@import "./blocks/main_filter";
+@import "./blocks/main_card";
+@import "./blocks/main_article";
+@import "./blocks/main_subscription";
+@import "./blocks/main_straps";
+@import "./blocks/footer";
+
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
