@@ -1,0 +1,102 @@
+.subscription {
+    // background-color: rgba(234, 228, 213, 0.9);
+    background-image: url(../../img/banner_catalog_2.png);
+    background-repeat: no-repeat;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-top: 65px;
+    padding-left: 10.25%;
+    padding-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
+
+    p {
+        text-transform: uppercase;
+        color: #818181;
+        font-size: 12px;
+        font-weight: 700;
+        padding-bottom: 18px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 45px;
+        font-weight: 700;
+        width: 40.96%;
+    }
+}
+
+.subscription--content {
+    display: flex;
+    align-items: end;
+    gap: 9.2%;
+
+    form {
+        display: flex;
+        align-items: end;
+        gap: 33px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: #444240;
+    }
+
+    input {
+        background-color: rgba(255, 255, 255, 0);
+        width: 278px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #1B1A17;
+        padding: 5px;
+    }
+
+    button {
+        padding: 22px 45px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #31302C;
+        border: 1px solid #31302C;
+    }
+
+    button:hover {
+        color: #fff;
+        background-color: rgba(49, 48, 44, 0.9);
+        border: 1px solid #fff;
+    }
+}
+
+@media screen and (max-width:1060px) {
+    .subscription{
+        background-color: rgba(234, 228, 213, 0.8);
+    }
+    .subscription--content {
+        flex-direction: column;
+        align-items: start;
+    }
+    .subscription h2 {
+        font-size: 36px;
+    }
+
+    .subscription--content form {
+        gap: 20vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subscription h2 {
+        width: 65%;
+    }
+
+    .subscription--content form {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+}
