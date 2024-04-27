@@ -1,0 +1,50 @@
+.catalog {
+    width: 84.92%;
+    margin: 0 auto;
+    padding-top: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.catalog--navigator {
+    color: #BDB9B5;
+    padding-bottom: 48px;
+    a {
+        text-decoration: none;
+        color: #BDB9B5;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    span {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    a:last-child {
+        color: #555248;
+    }
+}
+
+.catalog--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 34px;
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    label {
+        color: #BDB9B5;
+        font-size: 14px;
+    }
+
+    select {
+        color: #1B1A17;
+        font-size: 14px;
+        border: none;
+        width: 115px;
+    }
+}

@@ -1,0 +1,15 @@
+.catalog__container {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: #444240;
+}
+
+.catalog__container--cards {
+    width: 80.17%;
+
+    .catalog__cards--box {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+}

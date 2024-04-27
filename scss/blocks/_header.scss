@@ -11,8 +11,6 @@
     
     ul {
         display: flex;
-        margin: 0;
-        padding: 0;
         gap: 65px;
     }
 
@@ -55,7 +53,8 @@
 .header_icons--like div {
     background-color: #E6C8B4;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-self: center;
     position: absolute;
     top: -7px;
     left: 13px;

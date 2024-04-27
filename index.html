@@ -18,12 +18,14 @@
                 <img src="img/Ellipse.png" alt="logo">
                 <span>CONQUEST</span>
             </div>
-            <ul>
-                <li><a>Каталог</a></li>
-                <li><a>Акции</a></li>
-                <li><a>Доставка</a></li>
-                <li><a>Контакты</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a>Каталог</a></li>
+                    <li><a>Акции</a></li>
+                    <li><a>Доставка</a></li>
+                    <li><a>Контакты</a></li>
+                </ul>
+            </nav>
             <div class="header_icons">
                 <svg width="20px" height="20px">
                     <use xlink:href="img/sprite.svg#search"></use>
@@ -40,7 +42,309 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="catalog">
+            <div class="catalog--navigator">
+                <a href="#">Главная</a>
+                <span>></span>
+                <a href="#">Каталог</a>
+                <span>></span>
+                <a href="#">Мужские часы</a>
+            </div>
+            <div class="catalog--title">
+                <h1>Мужские часы</h1>
+                <div class="catalog--sort">
+                    <label for="sort" id="sort">Сортировать по:</label>
+                    <select name="sort" id="sort">
+                        <option value="sort1">популярности</option>
+                        <option value="sort2">возрастанию цены</option>
+                        <option value="sort3">убыванию цены</option>
+                    </select>
+                </div>
+            </div>
+            <div class="catalog__container">
+                <div class="catalog__container--filter">
+                    <form action="#">
+                                                
+                            <!-- Ползунок стоимости -->
+                        <div data-tab="tab-1" class="accordion--title">
+                            <legend >Стоимость</legend>
+                            <span></span>
+                        </div>
+                        <div id="tab-1" class="accordion--content">
+                            <div class="slider">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="range-input">
+                                <input type="range" class="range-min" min="5000" max="50000" value="5000" step="1000">
+                                <input type="range" class="range-max" min="5000" max="50000" value="50000" step="1000">
+                            </div>   
+                            <div class="price-input">
+                                <div><input type="number" class="input-min" value="5000"><span>₽</span></div>
+                                <div><input type="number" class="input-max" value="50000"><span>₽</span></div>
+                            </div>
+                        </div>
+
+                        <div data-tab="tab-2" class="accordion--title">
+                            <legend>Бренд</legend>
+                            <span></span>
+                        </div>
+                        <div id="tab-2" class="accordion--content">
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="techne" value="Techne">
+                                <label for="techne">Techne</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="rado" value="Rado">
+                                <label for="rado">Rado</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="bvlgari" value="Bvlgari">
+                                <label for="bvlgari">Bvlgari</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="tissot" value="Tissot">
+                                <label for="tissot">Tissot</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="omega" value="Omega">
+                                <label for="omega">Omega</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="brand" id="montblanc" value="Montblanc">
+                                <label for="montblanc">Montblanc</label>
+                            </div>
+                        </div>
+
+                        <div data-tab="tab-3" class="accordion--title">
+                            <legend >Механизм</legend>
+                            <span></span>
+                        </div>
+                        <div id="tab-3" class="accordion--content">
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="mechanism" id="manual" value="Manual_Winding">
+                                <label for="manual">С ручным подзаводом</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="mechanism" id="auto" value="Auto_Winding">
+                                <label for="auto">С автоподзаводом</label>
+                            </div>
+                        </div>
+
+                        <div data-tab="tab-4" class="accordion--title">
+                            <legend>Материал</legend>
+                            <span></span>
+                        </div>
+                        <div id="tab-4" class="accordion--content">
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="material" id="leather" value="Leather">
+                                <label for="leather">Кожа</label>
+                            </div>
+                            <div class="filter--checkbox">
+                                <input type="checkbox" name="material" id="plastic" value="Plastic">
+                                <label for="plastic">Пластик</label>
+                            </div>
+                        </div>
+
+                        <div data-tab="tab-5" class="accordion--title">
+                            <legend>Цвет</legend>
+                            <span></span>
+                        </div>
+                        <div id="tab-5" class="accordion--content">
+                            <div class="filter--colors">
+                                <input type="checkbox" name="color-watch" id="black"><label for="black"></label>
+                                <input type="checkbox" name="color-watch" id="brown"><label for="brown"></label>
+                                <input type="checkbox" name="color-watch" id="red"><label for="red"></label>
+                                <input type="checkbox" name="color-watch" id="green"><label for="green"></label>
+                                <input type="checkbox" name="color-watch" id="white"><label for="white"></label>
+                            </div>
+                        </div>
+                        <input type="reset" value="Сбросить фильтр">
+                        
+                    </form>
+                </div>
+                <div class="catalog__container--cards">
+                    <div class="catalog__cards--box">
+                        <div class="catalog--card">
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_2.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>15700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_3.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <article>
+                            <p><span>-20%</span>на вторую позицию в чеке</p>
+                        </article>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Rado</p>
+                                <span>14700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_8.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Techne</p>
+                                <span>12700 ₽</span>
+                            </div>
+                            <div>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#favourite"></use>
+                                </svg>
+                                <svg width="20px" height="20px">
+                                    <use xlink:href="img/sprite.svg#basket"></use>
+                                </svg>
+                            </div>
+                            <img src="img/watch_1.png" alt="watch">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="catalog_container--pages"></div>
+            </div>
+            <div class="catalog--pages">
+                <div>1 2 3...10</div>
+            </div>
+        </section>
+
+        <div></div>
+    </main>
     <footer></footer>
     <script src="main.js"></script>
 </body>
