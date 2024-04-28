@@ -68,6 +68,50 @@ titlesFilter.forEach(item => item.addEventListener('click', () => {
     }
 }))
 
-document.querySelector('[data-tab="tab-5"]').classList.add('active');
-document.querySelector('#tab-5').classList.add('active');
-document.querySelector('#tab-5').style.maxHeight = document.querySelector('#tab-5').scrollHeight + 'px';
+document.querySelector('[data-tab="tab-1"]').classList.add('active');
+document.querySelector('#tab-1').classList.add('active');
+document.querySelector('#tab-1').style.maxHeight = document.querySelector('#tab-1').scrollHeight + 'px';
+
+
+// Слайдер
+
+const slider = document.querySelector('.straps__slider--box');
+const sliderLine = document.querySelector('.straps--sliderline');
+const cards = document.querySelectorAll('.slide');
+
+console.log (cards);
+let count = 0;
+let width ;
+
+function init() {
+
+    width = slider.offsetWidth;
+    sliderLine.style.width = width * cards.length + 'px';
+    cards.forEach(item => {
+        item.style.width = width/cards.length +'px';
+        item.style.height = 'auto';
+    });
+}
+
+window.addEventListener('resize', init);
+init();
+
+function rollSlider(){
+    sliderLine.style.transform = 'translate(-' + count * width +'px)';
+}
+
+document.querySelector(".slider__arrow--right").addEventListener('click', function(){
+    count++
+    if (count >= cards.length){
+        count = 0;
+    }
+    rollSlider();
+});
+document.querySelector(".slider__arrow--left").addEventListener('click', function(){
+    count--;
+    if (count < 0){
+        count = cards.length - 1;
+    }
+    rollSlider();
+});
+

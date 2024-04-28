@@ -1,0 +1,105 @@
+.straps {
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    
+    .straps--arrows{
+        position: relative;
+    }
+
+    .slider__arrow--left {
+        position: absolute;
+        z-index: 1;
+        top: 250px;
+        left: 30px;
+    }
+
+    .slider__arrow--right {
+        position: absolute;
+        z-index: 1;
+        top: 250px;
+        right: 30px;
+    }
+
+    .straps--title {
+        margin: 0 auto;
+        width: 84.92%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 48px;
+    }
+
+    h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    a {
+        color: #444240;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #C4C0B6;
+        text-decoration: none;
+    }
+
+    .straps__slider--box{
+        margin: 0 auto;
+        width: 84.92%;
+        overflow: hidden;
+    }
+
+    .straps--sliderline {
+        width: 2000px;
+        display: flex;
+        gap: 40px;
+        margin: 0 auto;
+    }
+
+    .slide {
+        min-width: 360px;
+        background-color: #FDFDFB;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .slide>div:last-child{
+        display: flex;
+        justify-content: center;
+    }
+    .slide--card--text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 14px;
+        color:#444240;
+        text-transform: uppercase;
+    }
+
+    span {
+        color:#636261;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width:375px) {
+    .straps .straps--sliderline {
+        gap: 5px;
+    }
+    .slide {
+        width: 320px;
+    }
+    .straps .slide--card--text {
+        width: 320px;
+        gap:126px;
+        justify-content: start;
+    }
+}

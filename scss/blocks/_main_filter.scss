@@ -195,3 +195,9 @@ input[type="reset"] {
     display: block;
     transition: all 0.5s ease-out;
 }
+
+@media screen and (max-width:375px) {
+    .catalog__container--filter {
+        width: 100%;
+    }
+}
